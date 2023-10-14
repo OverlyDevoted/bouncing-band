@@ -22,14 +22,15 @@
 
 */
 
-import * as THREE from "three";
+import * as THREE from "./three/build/three.min.js";
 import { ARButton } from "./lib/ARButton.js";
-import { Howl, Howler } from "howler";
+import { Howl, Howler } from "./howler/dist/howler.min.js";
 import { Bouncer } from "./lib/Bouncer.js";
 import { preload, loadMesh, glbSrc } from "./lib/spawner.js";
-
+import fs from 'fs'
 // media assets
-import iconFiles from "./media/2d/icons/*.png";
+const iconFiles = fs.readdirSync('/media/2d/icons');
+console.log(iconFiles)
 import soundFiles from "./media/sounds/*.mp3";
 
 // gif
